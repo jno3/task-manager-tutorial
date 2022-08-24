@@ -41,7 +41,6 @@ getAllTasks();
 // DELETE TASK
 tasksDiv.addEventListener('click', async (e) => {
     const el = e.target;
-    console.log(el.classList)
     if(el.classList.contains('delete-btn')){
         const id = el.dataset.id;
         try{
@@ -49,7 +48,7 @@ tasksDiv.addEventListener('click', async (e) => {
             getAllTasks();
         }
         catch(err){
-            console.log(err);
+            console.error(err);
         }
     }
 });
